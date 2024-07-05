@@ -1,0 +1,9 @@
+<resources>
+    <string name="app_name">Trending App</string>
+    <string name="trending">Trending</string>
+    <string name="something_went_wrong">Something went wrong..</string>
+    <string name="no_internet_msg">An alien is probably blocking your signal.</string>
+    <string name="retry">Retry</string>
+    <string name="no_internet_connection">No internet connection</string>
+    <string name="server_error">Server Error</string>
+</resources>

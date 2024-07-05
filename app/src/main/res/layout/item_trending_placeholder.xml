@@ -1,0 +1,59 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools">
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:id="@+id/root"
+        android:background="@drawable/border_for_trending_item"
+        android:foreground="?attr/selectableItemBackground"
+        android:paddingBottom="@dimen/dp_16"
+        android:clickable="true"
+        android:focusable="true"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <de.hdodenhof.circleimageview.CircleImageView
+            android:id="@+id/iv_photo"
+            android:layout_width="@dimen/dp_56"
+            android:layout_height="@dimen/dp_56"
+            android:layout_marginStart="@dimen/dp_16"
+            android:layout_marginBottom="@dimen/dp_16"
+            android:layout_marginTop="@dimen/dp_16"
+            android:background="@color/color_grey"
+            app:civ_border_color="#03A9F4"
+            app:civ_border_width="@dimen/dp_2"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <TextView
+            android:id="@+id/tv_name"
+            style="@style/TextAppearance.MaterialComponents.Subtitle1"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginEnd="@dimen/dp_16"
+            android:layout_marginStart="@dimen/dp_16"
+            android:layout_marginTop="@dimen/dp_18"
+            app:layout_constraintEnd_toEndOf="parent"
+            android:textColor="@color/color_text_dark_high"
+            app:layout_constraintStart_toEndOf="@id/iv_photo"
+            app:layout_constraintTop_toTopOf="parent"
+            android:background="@color/color_grey"  />
+
+        <TextView
+            android:id="@+id/tv_title"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/dp_4"
+            android:layout_marginStart="@dimen/dp_16"
+            android:layout_marginEnd="@dimen/dp_16"
+            style="@style/TextAppearance.MaterialComponents.Subtitle1"
+            android:textSize="@dimen/sp_18"
+            android:background="@color/color_grey"
+            android:textColor="@color/color_text_dark_high"
+            app:layout_constraintTop_toBottomOf="@id/tv_name"
+            app:layout_constraintStart_toEndOf="@id/iv_photo"
+            app:layout_constraintEnd_toEndOf="parent"
+           />
+
+     </androidx.constraintlayout.widget.ConstraintLayout>
+</layout>

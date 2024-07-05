@@ -1,0 +1,150 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools">
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:id="@+id/root"
+        android:background="@drawable/border_for_trending_item"
+        android:foreground="?attr/selectableItemBackground"
+        android:paddingBottom="@dimen/dp_16"
+        android:clickable="true"
+        android:focusable="true"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <de.hdodenhof.circleimageview.CircleImageView
+            android:id="@+id/iv_photo"
+            android:layout_width="@dimen/dp_56"
+            android:layout_height="@dimen/dp_56"
+            android:layout_marginStart="@dimen/dp_16"
+            android:layout_marginBottom="@dimen/dp_16"
+            android:layout_marginTop="@dimen/dp_16"
+            android:src="@drawable/profile_user"
+            app:civ_border_color="#03A9F4"
+            app:civ_border_width="@dimen/dp_2"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <TextView
+            android:id="@+id/tv_name"
+            style="@style/TextAppearance.MaterialComponents.Subtitle1"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="@dimen/dp_16"
+            android:layout_marginTop="@dimen/dp_18"
+            android:textColor="@color/color_text_dark_high"
+            app:layout_constraintStart_toEndOf="@id/iv_photo"
+            app:layout_constraintTop_toTopOf="parent"
+            tools:text="Prashant Verma" />
+
+        <TextView
+            android:id="@+id/tv_title"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/dp_4"
+            android:layout_marginStart="@dimen/dp_16"
+            style="@style/TextAppearance.MaterialComponents.Subtitle1"
+            android:textSize="@dimen/sp_18"
+            tools:text="Android Developer"
+            android:textColor="@color/color_text_dark_high"
+            app:layout_constraintTop_toBottomOf="@id/tv_name"
+            app:layout_constraintStart_toEndOf="@id/iv_photo"
+            app:layout_constraintEnd_toEndOf="parent"
+           />
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:id="@+id/cl_info"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            app:layout_constraintEnd_toEndOf="parent"
+            android:visibility="gone"
+            tools:visibility="visible"
+            android:layout_marginStart="@dimen/dp_16"
+            android:layout_marginEnd="@dimen/dp_8"
+            android:layout_marginTop="@dimen/dp_4"
+            app:layout_constraintStart_toEndOf="@+id/iv_photo"
+            app:layout_constraintTop_toBottomOf="@id/tv_title">
+
+            <TextView
+                android:id="@+id/tv_description"
+                style="@style/TextAppearance.MaterialComponents.Subtitle1"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textSize="@dimen/sp_17"
+                android:textColor="@color/color_text_dark_medium"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent"
+                tools:text="This is Description  jnjnj jnbhjb bhkj jnjn jnjn" />
+
+            <ImageView
+                android:id="@+id/iv_language"
+                android:layout_width="@dimen/dp_10"
+                android:layout_height="@dimen/dp_10"
+                android:layout_marginTop="@dimen/dp_20"
+                android:src="@drawable/ic_rounded_circle"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/tv_description" />
+
+            <TextView
+                android:id="@+id/tv_language"
+                style="@style/TextAppearance.MaterialComponents.Subtitle1"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/dp_12"
+                android:layout_marginStart="@dimen/dp_8"
+                android:textSize="@dimen/sp_17"
+                app:layout_constraintTop_toBottomOf="@id/tv_description"
+                app:layout_constraintStart_toEndOf="@id/iv_language"
+                tools:text="Kotlin" />
+
+            <ImageView
+                android:id="@+id/iv_star"
+                android:layout_width="@dimen/dp_16"
+                android:layout_height="@dimen/dp_16"
+                android:layout_marginTop="@dimen/dp_16"
+                android:layout_marginStart="@dimen/dp_32"
+                android:src="@mipmap/star_yellow_16"
+                app:layout_constraintTop_toBottomOf="@id/tv_description"
+                app:layout_constraintStart_toEndOf="@id/tv_language"
+                />
+
+            <TextView
+                android:id="@+id/tv_star"
+                style="@style/TextAppearance.MaterialComponents.Subtitle1"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/dp_12"
+                android:layout_marginStart="@dimen/dp_4"
+                android:textSize="@dimen/sp_17"
+                app:layout_constraintTop_toBottomOf="@id/tv_description"
+                app:layout_constraintStart_toEndOf="@id/iv_star"
+                tools:text="5005" />
+
+            <ImageView
+                android:id="@+id/iv_fork"
+                android:layout_width="@dimen/dp_16"
+                android:layout_height="@dimen/dp_16"
+                android:layout_marginTop="@dimen/dp_16"
+                android:layout_marginStart="@dimen/dp_32"
+                android:src="@mipmap/fork_black_16"
+                app:layout_constraintTop_toBottomOf="@id/tv_description"
+                app:layout_constraintStart_toEndOf="@id/tv_star"
+                />
+
+            <TextView
+                android:id="@+id/tv_fork"
+                style="@style/TextAppearance.MaterialComponents.Subtitle1"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/dp_12"
+                android:layout_marginStart="@dimen/dp_4"
+                android:textSize="@dimen/sp_17"
+                app:layout_constraintTop_toBottomOf="@id/tv_description"
+                app:layout_constraintStart_toEndOf="@id/iv_fork"
+                tools:text="506" />
+
+
+        </androidx.constraintlayout.widget.ConstraintLayout>
+
+     </androidx.constraintlayout.widget.ConstraintLayout>
+</layout>
