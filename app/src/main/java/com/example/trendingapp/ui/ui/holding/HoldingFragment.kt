@@ -17,7 +17,6 @@ import com.google.gson.reflect.TypeToken
 import dagger.hilt.android.AndroidEntryPoint
 import javax.inject.Inject
 
-git remote add origin https://github.com/v-prashant/upstox_assign_stock.git
 @AndroidEntryPoint
 class HoldingFragment : Fragment() {
 
