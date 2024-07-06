@@ -1,9 +1,11 @@
 <resources>
-    <string name="app_name">Trending App</string>
-    <string name="trending">Trending</string>
-    <string name="something_went_wrong">Something went wrong..</string>
-    <string name="no_internet_msg">An alien is probably blocking your signal.</string>
-    <string name="retry">Retry</string>
-    <string name="no_internet_connection">No internet connection</string>
+    <string name="app_name">Stock App</string>
+    <string name="holdings">Holdings</string>
     <string name="server_error">Server Error</string>
+    <string name="current_value">Current value</string>
+    <string name="total_investment">Total Investment</string>
+    <string name="today_s_profit_loss"><![CDATA[Today\'s profit & Loss]]></string>
+    <string name="profit_loss"><![CDATA[Profit & Loss]]></string>
+    <string name="profit_land_loss"><![CDATA[Profit & Loss]]></string>
+    <string name="profit_and_loss_button">Profit and loss button</string>
 </resources>

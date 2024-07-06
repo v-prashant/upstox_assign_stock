@@ -8,16 +8,13 @@ import com.google.gson.reflect.TypeToken;
 import com.securepreferences.SecurePreferences;
 
 import java.util.ArrayList;
+import java.util.List;
 import java.util.Set;
 
 public final class SharedPreferenceUtil {
-    // Constants for Keys
 
-    public static final String TRENDING_DATA = "TRENDING_DATA";
-    public static final String TRENDING_DATA_TS = "TRENDING_DATA_TS";
-
-    // Util functions
     private static SharedPreferences preferences;
+    public static final String Holding_Data = "holding_data";
 
     public SharedPreferenceUtil() {
     }
@@ -64,7 +61,7 @@ public final class SharedPreferenceUtil {
     }
 
     // Setters
-    public static <T> void setSharedPrefObject(Context context, String key, ArrayList<T> value){
+    public static <T> void setSharedPrefObject(Context context, String key, List<T> value){
         SharedPreferences.Editor edit = getPreferences(context).edit();
         Gson gson = new Gson();
         String json = gson.toJson(value);

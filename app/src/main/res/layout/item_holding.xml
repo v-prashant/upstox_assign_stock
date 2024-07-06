@@ -1,0 +1,78 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools">
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:id="@+id/root"
+        android:background="@drawable/border_for_trending_item"
+        android:paddingBottom="@dimen/dp_16"
+        android:clickable="true"
+        android:focusable="true"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <TextView
+            android:id="@+id/tv_company"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/dp_12"
+            android:layout_marginStart="@dimen/dp_16"
+            style="@style/TextAppearance.MaterialComponents.Subtitle1"
+            android:textSize="@dimen/sp_18"
+            tools:text="HDFC"
+            android:textColor="@color/black"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintEnd_toStartOf="@+id/tv_ltp"
+            />
+
+        <TextView
+            android:id="@+id/tv_ltp"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/dp_12"
+            android:layout_marginEnd="@dimen/dp_16"
+            style="@style/TextAppearance.MaterialComponents.Subtitle1"
+            android:textSize="@dimen/sp_18"
+            android:textAlignment="textEnd"
+            tools:text="LTP:-  ₹ 110"
+            android:textColor="@color/color_text_dark_high"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintStart_toEndOf="@id/tv_company"
+            app:layout_constraintEnd_toEndOf="parent"
+            />
+
+
+        <TextView
+            android:id="@+id/tv_net_qty"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/dp_20"
+            android:layout_marginStart="@dimen/dp_16"
+            style="@style/TextAppearance.MaterialComponents.Subtitle1"
+            android:textSize="@dimen/sp_18"
+            tools:text="Net qty: 3"
+            android:textColor="@color/black"
+            app:layout_constraintTop_toBottomOf="@id/tv_company"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintEnd_toStartOf="@+id/tv_pl"
+            />
+
+        <TextView
+            android:id="@+id/tv_pl"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/dp_20"
+            android:layout_marginEnd="@dimen/dp_16"
+            style="@style/TextAppearance.MaterialComponents.Subtitle1"
+            android:textSize="@dimen/sp_18"
+            android:textAlignment="textEnd"
+            tools:text="P&amp;L:-  ₹ 50"
+            android:textColor="@color/color_text_dark_high"
+            app:layout_constraintTop_toBottomOf="@id/tv_ltp"
+            app:layout_constraintStart_toEndOf="@id/tv_net_qty"
+            app:layout_constraintEnd_toEndOf="parent"
+            />
+
+     </androidx.constraintlayout.widget.ConstraintLayout>
+</layout>

@@ -1,11 +1,13 @@
 package com.example.trendingapp.ui
 
-import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import com.example.trendingapp.R
+import com.example.trendingapp.base.BaseActivity
 import com.example.trendingapp.ui.ui.holding.HoldingFragment
+import dagger.hilt.android.AndroidEntryPoint
 
-class StockActivity : AppCompatActivity() {
+@AndroidEntryPoint
+class StockActivity : BaseActivity() {
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)

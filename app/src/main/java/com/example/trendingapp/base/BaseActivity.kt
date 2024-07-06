@@ -47,22 +47,22 @@ open class BaseActivity : AppCompatActivity(){
         }
     }
 
-    fun showErrorMessage(message: String?) {
+    open fun showErrorMessage(message: String?) {
         if(message != null)
             showToastMessage(message, ToastUtils.ToastType.ERROR, ToastUtils.HeaderToastType.ERROR)
     }
 
-    fun showSuccessMessage(message: String) {
+    open fun showSuccessMessage(message: String) {
         ToastUtils.makeToast(
             ToastUtils.ToastType.SUCCESS,
             ToastUtils.HeaderToastType.SUCCESS, message)
     }
 
-    fun showToastMessage(message: String, type: ToastUtils.ToastType, headerToastType: ToastUtils.HeaderToastType) {
+    open fun showToastMessage(message: String, type: ToastUtils.ToastType, headerToastType: ToastUtils.HeaderToastType) {
         ToastUtils.makeToast(type,headerToastType, message, Toast.LENGTH_SHORT)
     }
 
-    fun <T> MutableLiveData<Resource<T>>.observeLiveData(
+    open fun <T> MutableLiveData<Resource<T>>.observeLiveData(
         success: (t: T) -> Unit
     ) {
         observe(this@BaseActivity) {

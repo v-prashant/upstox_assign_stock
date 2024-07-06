@@ -1,0 +1,145 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools">
+
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:id="@+id/root"
+        android:background="@drawable/border_for_trending_item"
+        android:paddingBottom="@dimen/dp_16"
+        android:clickable="true"
+        android:focusable="true"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <TextView
+            android:id="@+id/tv_curr_value"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/dp_12"
+            android:layout_marginStart="@dimen/dp_16"
+            style="@style/TextAppearance.MaterialComponents.Subtitle1"
+            android:textSize="@dimen/sp_18"
+            android:textStyle="bold"
+            android:text="@string/current_value"
+            android:textColor="@color/color_text_dark_high"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintEnd_toStartOf="@+id/tv_curr_value_value"
+            />
+
+        <TextView
+            android:id="@+id/tv_curr_value_value"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/dp_12"
+            android:layout_marginEnd="@dimen/dp_16"
+            style="@style/TextAppearance.MaterialComponents.Subtitle1"
+            android:textSize="@dimen/sp_18"
+            android:textAlignment="textEnd"
+            tools:text="₹ 110"
+            android:textColor="@color/color_text_dark_high"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintStart_toEndOf="@id/tv_curr_value"
+            app:layout_constraintEnd_toEndOf="parent"
+            />
+
+        <TextView
+            android:id="@+id/tv_total_investment"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/dp_12"
+            android:layout_marginStart="@dimen/dp_16"
+            style="@style/TextAppearance.MaterialComponents.Subtitle1"
+            android:textSize="@dimen/sp_18"
+            android:textStyle="bold"
+            android:text="@string/total_investment"
+            android:textColor="@color/color_text_dark_high"
+            app:layout_constraintTop_toBottomOf="@id/tv_curr_value"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintEnd_toStartOf="@+id/tv_total_investment_value"
+            />
+
+        <TextView
+            android:id="@+id/tv_total_investment_value"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/dp_12"
+            android:layout_marginEnd="@dimen/dp_16"
+            style="@style/TextAppearance.MaterialComponents.Subtitle1"
+            android:textSize="@dimen/sp_18"
+            android:textAlignment="textEnd"
+            tools:text="₹ 50"
+            android:textColor="@color/color_text_dark_high"
+            app:layout_constraintTop_toBottomOf="@id/tv_curr_value_value"
+            app:layout_constraintStart_toEndOf="@id/tv_total_investment"
+            app:layout_constraintEnd_toEndOf="parent"
+            />
+
+        <TextView
+            android:id="@+id/tv_today_pl"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/dp_12"
+            android:layout_marginStart="@dimen/dp_16"
+            style="@style/TextAppearance.MaterialComponents.Subtitle1"
+            android:textSize="@dimen/sp_18"
+            android:textStyle="bold"
+            android:text="@string/today_s_profit_loss"
+            android:textColor="@color/color_text_dark_high"
+            app:layout_constraintTop_toBottomOf="@id/tv_total_investment"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintEnd_toStartOf="@+id/tv_today_pl_value"
+            />
+
+        <TextView
+            android:id="@+id/tv_today_pl_value"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/dp_12"
+            android:layout_marginEnd="@dimen/dp_16"
+            style="@style/TextAppearance.MaterialComponents.Subtitle1"
+            android:textSize="@dimen/sp_18"
+            android:textAlignment="textEnd"
+            tools:text="₹ 50"
+            android:textColor="@color/color_text_dark_high"
+            app:layout_constraintTop_toBottomOf="@id/tv_total_investment_value"
+            app:layout_constraintStart_toEndOf="@id/tv_today_pl"
+            app:layout_constraintEnd_toEndOf="parent"
+            />
+
+        <TextView
+            android:id="@+id/tv_pl"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/dp_12"
+            android:layout_marginStart="@dimen/dp_16"
+            style="@style/TextAppearance.MaterialComponents.Subtitle1"
+            android:textSize="@dimen/sp_18"
+            android:textStyle="bold"
+            android:text="@string/profit_loss"
+            android:textColor="@color/color_text_dark_high"
+            app:layout_constraintTop_toBottomOf="@id/tv_today_pl"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintEnd_toStartOf="@+id/tv_pl_value"
+            />
+
+        <TextView
+            android:id="@+id/tv_pl_value"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/dp_12"
+            android:layout_marginEnd="@dimen/dp_16"
+            style="@style/TextAppearance.MaterialComponents.Subtitle1"
+            android:textSize="@dimen/sp_18"
+            android:textAlignment="textEnd"
+            tools:text="₹ 50"
+            android:textColor="@color/color_text_dark_high"
+            app:layout_constraintTop_toBottomOf="@id/tv_today_pl_value"
+            app:layout_constraintStart_toEndOf="@id/tv_pl"
+            app:layout_constraintEnd_toEndOf="parent"
+            />
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+</layout>
